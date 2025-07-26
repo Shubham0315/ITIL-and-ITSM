@@ -189,3 +189,71 @@ What is role of automation in ITSM?
 - Change enablement :- Auto create RFCs from devops tools, enforce approver flows, trigger change calender updates
 - Problem management :- Auto detect trends from recurring incidents, create problem records
 - SLA management :- Track response/resoution times, escalate before breach automatically
+
+
+--------------------------------------------------------------
+
+How have you implemented or managed Change Enablement processes in a CI/CD or DevOps environment?
+-
+- In my role as DevOps engineer, I was responsible for implementing and managing Change Enablement process in a CICD pipeline driven env wehre we pushed code to prod multiple times in a week
+- We had risk-based and automated change classification approach :-
+  - **Standard changes (Low risk)** :- Changes like config updates, security patches or IaC deployments were pre-approved
+  - **Normal changes (Medium-high risk)** :- For major code deployments or DB migrations, we created CR like RFCs in Cherwell directly from GitLab pipeline using API integration. These changes were auto routed to CAB or pre-assigned approvers based on impact and risk
+  - **Emergency changes** :- For hotfixes or critical prod issues, we followed e change process where approvals are obtained via ECAB on call and post validations are completed during PIR meetings
+ 
+--------------------------------------------------------------
+
+Write a change pipeline using jenkins declarative syntax
+-
+- Below pipeline is suited for env where Change enablement is integrated with devops practices
+- It has change ID tracking enabled with staged deployment. Email notification is sent after post build actions.
+- It also includes timeout for approvals to avoid stuck builds
+
+--------------------------------------------------------------
+
+Change pipeline for standard, normal and e change 
+-
+
+--------------------------------------------------------------
+
+How do you ensure audit readiness and traceability in the change management process?
+-
+- Link every deployment to unique change ID from Cherwell
+- Maintain detailed logs in CICD pipelines for all stages
+- Store artifacts and approvals in VCS or ticketing tools
+- Enable automated tagging in Git and jenkins for rollback/reference
+- Coduct regular post change reviews
+
+--------------------------------------------------------------
+
+How have you integrated change management into a CI/CD pipeline? What challenges did you face?
+-
+- We've integrated CM into CICD by
+  - Auto creating and updating CRs in Cherwell by jenkins
+  - Triggering manual approvals (CAB/ECAB) using jenkins input steps for Normal/Emergency changes
+  - Ensuring traceablity with Change ID in commit messages, build logs and deployment tags
+ 
+- Challenges :-
+  - Delays due to manual approvals slowing down delivery
+  - Aligning fast devops cycles with traditional ITIL processes
+  - Handling e changes without skipping audit trials
+ 
+--------------------------------------------------------------
+
+Describe your experience with Cherwell ticketing tool. How is the workflow?
+-
+- I have used Cherwell ITSM tool primarily for IM, CM, PM, SR
+
+- **Initiation/Ticket creation** :- CR is created manually or triggered via integrated tools like Jenkins, serviceNow or email listeners
+  - Key fields are Change type, requestor, description, implementation plan, rollback plan, start/end time, affected services
+- **Initial review** :- Assigned a Change manager or co ordinator for validation
+- Impact and risk assessment to be assessed by stakeholders
+- Approval workflow for Standard (Auto), normal by CAB, E change by ECAB for expidited approval
+- **Implementation** :- Upon approval chnage moves to scheduled and then in progress, Implementation team performs task
+- **Reviews and closure** :- Post implementation review is conducted to verify success of change
+- Then ticket is closed
+
+--------------------------------------------------------------
+
+
+
