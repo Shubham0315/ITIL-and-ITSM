@@ -255,5 +255,40 @@ Describe your experience with Cherwell ticketing tool. How is the workflow?
 
 --------------------------------------------------------------
 
+How do you identify gaps in operational readiness before a change is implemented?
+-
+- Conduct a pre-implementation checklist like monitoring, backups, rollback plan, support handover
+- Review change documentation for missing risk/impact analysis
+- Validate if test results, signoffs, config updates are complete
+- Ensure support teams and stakeholders are informed and ready
 
+--------------------------------------------------------------
 
+What kind of reports have you created for change governance meetings? What tools did you use?
+-
+- Change dashboard summary :- Total changes Normal, std, emergency. Status like open, approved, rejected, completed
+- Change success/failure rate
+- Pending approvals
+- E change report :- Frequency, justification, success/failure. PIR summary
+- Change collision and risk analysis :- High risk vs low risk count
+- Compliance and SLA violations :- changed implemented without approvals. SLA breaches
+
+--------------------------------------------------------------
+
+How do you ensure all stakeholders are aligned and informed during a major system change?
+-
+- Identify stakeholders early like business people, IT ops, support teams and end users
+- Send pre change communication
+- Maintain central change record like any ticketing tool
+- Hold pre change review calls
+- Provide real time updates on slack, teams during implementation
+- Port change review and rebrief to share outcomes, verify no open issues
+
+--------------------------------------------------------------
+
+Have you ever redesigned or improved an existing change enablement process? What was your approach and the result?
+-
+- Assessment of existing process :- Reviewed SLAs, identified delays, manual steps
+- Stakeholder consultation :- to get feedback about practical challenges
+- Process redesign :- Segregated normal vs emergency workflows clearly with proper ECAB routing. Integrated CICD pipelines with change tickets
+- Automation :- For approvals of low-risk changes
