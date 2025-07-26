@@ -1,0 +1,34 @@
+pipeline {
+  agent any
+
+  parameters {
+    choice(name: 'CHANGE_TYPE', choices: ['standard', 'Normal', 'Emergency'], description: 'Select change type')
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        echo "Checking out code for ${params.CHANGE_TYPE}"
+        checkout scm
+      }
+    }
+
+    stage('Approval for Normal or E change') {
+      when {
+        anyOf {
+          expression { params.CHANGE_TYPE == 'Normal' }
+          expression { params.CHANGE_TYPE == 'Emergency' }
+        }
+      }
+      steps {
+        input message: "Approval required for ${params.CHANGE_TYPE} change", ok: "APPROVE"
+      }
+    }
+
+
+
+
+
+
+
+    
