@@ -110,5 +110,82 @@ What is known error?
 
 What is a difference between service desk and help desk?
 -
-- 
+- Service desk provides single point of contact for users to request IT support and services to resolve IT issues
+  - Focuses on overall service delivery and aligning IT with business needs
+  - Its fully integrated with ITIL processes like incident, problem, change, SR and used ITSM platforms like ServiceNow, JIRA
+- Help desk primarily focuses on resolving technical issues
+  - It is primarily for incident resolution and technical troubleshooting
+  - Handles basic support like password reset, printer issues
+ 
+- Mail not working - Help desk troubleshoots and restores access. Service desk processes request and resolves incident while updating user and IT team
 
+--------------------------------------------------------------
+
+How to measure effectiveness of ITSM processes?
+-
+- Its essential to ensure IT services are delivering values to business, improving over time and aligned with customer expectations
+- Using KPIs like MTTR, First call resolution rate, customer satisfaction scores, % of incidents resolved within SLA, no of reopened incidents - For incident management
+- For change management KPIs are % successful changes, change failure rate, e changes count, time to implement changes
+
+- A decrease in MTTR indicates incident management processes are improving, leading to less downtime for users
+
+--------------------------------------------------------------
+
+What is the purpose of change management process?
+-
+- It ensures changes in IT are planned, reviewed, approved and implemented with minimal disruption to services
+- Before deploying change, CM would assess potential impact, obtain approval from stakeholders and schedule changes during maintenance window
+- It ensures service continuity, improves communication with stakeholders in change
+
+- Standard change :- Low risk pre approved and repeatable
+- Normal change :- Goes through full assessment and approval process
+- E change :- Implemented quickly to resolve major incidents
+
+--------------------------------------------------------------
+
+How to handle service outages outside of business hrs?
+-
+- Organization have predefined procedures for managing outages outside of business hrs like on call support and escalation process
+- It requires clear plan, defined roles and effective communciation to minimize downtime and business impact
+
+- Steps
+  - Detect outages quickly
+  - Trigger on call escalation (if no response within SLA)
+  -  Log the incident
+  -  Implement immediate workarounds
+  -  Document all actions
+  -  Perform PIR
+ 
+- At midnight monitoring tool detects high CPU usage on prod DB. Cloudwatch alerts on call engineer. Engineer joins war room, rolls back recent patch and restores service. Then PIR is scheduled
+
+--------------------------------------------------------------
+
+What is the role of Config Management DB (CMDB) in ITSM ?
+-
+
+
+--------------------------------------------------------------
+
+How to esnure continuous improvement in ITSM process?
+-
+- CI involves regularly reviewing processes, identifying areas of enhancement and implementing changes to increase efficiency and effectiveness
+- It keeps IT services efficient. reliable and aligned with evolving business goals
+- Its imp to enhance service quality and customer satisfaction. Adapt business needs and tech changes
+
+- What is the vision
+- Where are we now
+- Where we want to be
+- How to get there
+- Take actions
+- How to keep momentum going
+
+--------------------------------------------------------------
+
+What is role of automation in ITSM?
+-
+- It streamlines repetitive tasks, improves efficiency and reduces risk of human error in ITSM process
+- Incident management :- auto assign tickets, route to correct team, trigger alerts
+- SR management :- password reset, laptop provisioning
+- Change enablement :- Auto create RFCs from devops tools, enforce approver flows, trigger change calender updates
+- Problem management :- Auto detect trends from recurring incidents, create problem records
+- SLA management :- Track response/resoution times, escalate before breach automatically
