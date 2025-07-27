@@ -323,4 +323,7 @@ How to use cherwell to raise CR and explain the related process?
 - Once everything is in place, we get signoffs from stakeholders to go ahead with the change
 - Then we as DevOps team implement the change and perform post change validations closing respective tasks
 
+- While creating change we specify the type of change (Normal, emergency), environment (DEV/UAT/PROD), assign team for the change.
+- In change, we update start and end time with close code. 
+
 --------------------------------------------------------------
