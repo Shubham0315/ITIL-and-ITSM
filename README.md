@@ -330,3 +330,18 @@ How to use cherwell to raise CR and explain the related process?
 
 - I've integrated change processes with automation pipelines so that standard and normal changes are auto documented, approved via workflows and tracked for compliance.
 - I ensure traceability by linking change records to version control commits and deployment logs and use dashboards for stakeholders visibility
+
+--------------------------------------------------------------
+
+What are the stages that constitute ITIL?
+-
+- Servicve strategy - Service design - Service transition - Service operation - Continual service improvement
+
+--------------------------------------------------------------
+
+Benefits of ITIL
+-
+- Successful alignment between IT and business
+- Focus on customer satisfaction through delivery service
+- Cost effective through better utilization of resources
+- Supports constant and sudden business changes
