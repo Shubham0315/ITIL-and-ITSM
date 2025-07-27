@@ -308,4 +308,19 @@ Release management process
   - Communication plan :- To communicate all stakeholders and teams regarding the activity so as to informed
   - Support plan :- To ask teams regarding whose support is required at what time or after which step in implementation
  
+  - During and after deployment we need to engage many teams. One is shift lead which co-ordinates for any issue occured and performs sanity post change
+  - Ops team is there for post-deployment checks
+ 
+--------------------------------------------------------------
+
+How to use cherwell to raise CR and explain the related process?
+-
+- We raise CR using cherwell ticketing tool adding CR number and description with required tasks assigning to respective teams
+- Then add approvals which are needed to perform the change
+- Suppose for our team any task is assigned, its assigned to our DL group. We need to assign the task to any of the team members.
+  - suppose peer review and validation task is for our team we get it assigned and acknowledge, perform yhe task and close it with correct close code
+- Then documents which are added while creating change are checked with stakeholders in a MOP review meet to understand functional requirements and other things like impact
+- Once everything is in place, we get signoffs from stakeholders to go ahead with the change
+- Then we as DevOps team implement the change and perform post change validations closing respective tasks
+
 --------------------------------------------------------------
