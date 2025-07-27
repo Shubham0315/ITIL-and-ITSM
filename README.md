@@ -327,3 +327,6 @@ How to use cherwell to raise CR and explain the related process?
 - In change, we update start and end time with close code. 
 
 --------------------------------------------------------------
+
+- I've integrated change processes with automation pipelines so that standard and normal changes are auto documented, approved via workflows and tracked for compliance.
+- I ensure traceability by linking change records to version control commits and deployment logs and use dashboards for stakeholders visibility
