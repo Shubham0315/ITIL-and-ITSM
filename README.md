@@ -292,3 +292,20 @@ Have you ever redesigned or improved an existing change enablement process? What
 - Stakeholder consultation :- to get feedback about practical challenges
 - Process redesign :- Segregated normal vs emergency workflows clearly with proper ECAB routing. Integrated CICD pipelines with change tickets
 - Automation :- For approvals of low-risk changes
+
+--------------------------------------------------------------
+
+Release management process
+-
+- We used to get demands from PM
+- We sent mail to CM to get the demands aligned
+- Then once demands are aligned we prepare the RFC with supporting documents and send to CM to get it raised.
+- Supporting documents are :-
+  - Impact sheet :- If the RFC is downtime, for what time the application will be down. It also includes rollback and sanity time
+  - Release notes :- Include WAR/EAR and script path
+  - Deployment SOP :- steps of deployment
+  - Signoffs :- We used to send mails to stakeholders regarding UAT, SIT, Security signoffs. Once their approvals are in place, attach in RFC as per CM process
+  - Communication plan :- To communicate all stakeholders and teams regarding the activity so as to informed
+  - Support plan :- To ask teams regarding whose support is required at what time or after which step in implementation
+ 
+--------------------------------------------------------------
